@@ -1,0 +1,13 @@
+import requests
+
+url = "https://api.uat.bapsapps.org/myseva/api/v1/Person/FamilyMembersProfileMask?personId=2015058&includeAddressInfo=true"
+
+payload = {}
+headers = {
+  'Accept': 'application/json',
+  'Authorization': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ik5vbmUiLCJyZXF1ZXN0b3JpZCI6Ik5vbmUiLCJyZXNvdXJjZXVyaSI6IiIsImFkZGl0aW9uYWxpbmZvIjoiTm9uZSIsIm5vbmNlIjoiTm9uZSIsInVpZCI6ImVkNjhhODUwLWFiNTUtNGI5OS05MTIzLWIzOWRiOWJkYjEwNCIsInNpZCI6IjAyMzkxMDU1LTE1ZWEtNGEzMi1hMmViLTQ0MmY1ODlmMWNkMSIsImFpZCI6ImM4YTFlYmY3LTVlNGMtNDQ5Yi1hODA0LWEzMGJhZjQ0MjA1MCIsImNpZCI6IjA3NENFRjg0LTBEQjktNEEwNi1BQkY2LTZBRUQ2NDU0MjE5MSIsImF1dGgiOiJ2ZXJpZmllZCIsImZuIjoiSGl0ZXNoIiwibG4iOiJQYXRlbCIsInBpZCI6IjM3OTQiLCJjdCI6ImF0Iiwicm9sZSI6IlVuZGVmaW5lZCIsIm5iZiI6MTcyOTA5MDYzMSwiZXhwIjoxNzI5MDk3ODMxLCJpYXQiOjE3MjkwOTA2MzEsImlzcyI6Imh0dHBzOi8vYmFwcy5vcmciLCJhdWQiOiJNZW1iZXJzIn0.IDQj67syaoSeR6Sj10kkxesb4Yu90TIJ4nCuLE99GJQ'
+}
+
+response = requests.request("GET", url, headers=headers, data=payload)
+
+print(response.json())
